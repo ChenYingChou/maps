@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>地圖展示</title>
+<link rel="stylesheet" type="text/css" href="main.css" media="all">
+<!-- http://finenet.com.tw/ -->
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAwMvYCcAIeDYyDNXLwfVGdBTQxhV7Fc59ICl5wfKO7RkxCpQ7cxQXQOsAdlXC06THRKC7u5I8twA4PQ"></script>
+<!-- -->
+<!-- http://localhost/ 
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAwMvYCcAIeDYyDNXLwfVGdBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxS2lhkAviF3A1pIIeu9VuGfolCnhA"></script>
+-->
+</head>
+<body>
+<div class="header">
+	<div style="font-size:2em">地圖展示</div>
+</div>
+<div class="content">
+	<div class="left">
+		<div class="bar"></div>
+		<div>
+			<label for="selCountry">請選擇:</label>
+			<select id="selCountry">
+				<option value="">--</option>
+				<option value="cn">中　國</option>
+				<option value="hk">香　港</option>
+				<option value="tw">台　灣</option>
+				<option value="jp">日　本</option>
+			</select>
+		</div>
+		<div class="bar" style="background-color:purple"></div>
+		<div style="height:450px;overflow-y:auto">
+			<dl id="itemList"></dl>
+		</div>
+	</div>
+	<div class="middle">
+		<div class="bar" style="background-color:gray"></div>
+		<noscript>Javascript not enabled"</noscript>
+		<div id="gmaps" style="width:100%; height:400px"></div>
+		<div class="bar" style="background-color:blue"></div>
+	</div>
+	<div class="right">
+		<div class="bar"></div>
+		<div id="msgLog" style="height:450px;overflow-y:auto;font-size:80%"></div>
+	</div>
+</div>
+<div class="footer"></div>
+
+<script type="text/javascript" src="gmaps.js"></script>
+<script id="tmplList" type="text/html">
+	<dd class="toMarker"><a href="{%= url %}" target="_blank"></a>&nbsp;{%= name %}</dd>
+	<dt>{%= email %}</dt>
+	<dt>電話: {%= phone %}</dt>
+	<dt>地址: {%= address %}</dt>
+</script>
+<script id="tmplInfo" type="text/html">
+	<dl>
+		<dd><a href="{%= url %}" target="_blank">{%= name %}</a></dd>
+		<dt>地址: {%= address %}</dt>
+		<dt>電話: {%= phone %}</dt>
+	</dl>
+</script>
+<script type="text/javascript">
+google.setOnLoadCallback(function() {
+	// 因為 jQuery 是由 Google-AJAX API 載入(見 gmaps.js 最後面的程式碼)
+	// 故要在 google.setOnLoadCallback() 中才可安全使用 jQuery
+
+	//將下行註解去掉可使用特效(路徑請自改), 見 http://gsgd.co.uk/sandbox/jquery/easing/
+	//jQuery.getScript('/js/jq/easing.js');
+	
+	jQuery(function($) {
+		$('#selCountry').change(function() {
+			var cid = $(this).val();	// value of option: cn,hk,tw,jp,...
+			if (cid) {
+				myMap.load('ajaxLoad.php',{
+					'Action': 'Country',
+					'Country': cid
+				},function(data) {
+					var s = 'ajaxLoad> Country='+cid+'<br/>\n',
+						value;
+					for (var name in data) {
+						s += '\t'+name+': ';
+						value = data[name];
+						if ($.isArray(value)) 
+							s += 'Array['+value.length+']';
+						else if ($.isPlainObject(value))
+							s += 'Object';
+						else if (typeof value === 'string')
+							s += value.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+						else
+							s += value;
+						s += '<br/>\n';
+					}
+					s += '----------<br/>\n';
+					$('#msgLog').prepend(s);
+				});
+			}
+		}).val('tw').change();
+
+		myMap.options().onOpenMarker = function(point, marker) {
+			// this = GMarker
+			var s = 'onOpenMarker&gt;<br/>'+marker.name+
+					'<br/>----------<br/>';
+			$('#msgLog').prepend(s);
+			//return false;			// 若返回 false 將會禁止執行開啟 InfoWindow
+			//return s;				// 若返回字串, 將取代模版的執行結果
+		}; 
+	});
+});
+
+var MapOptions = {
+		//easing: 'easeOutBounce',	// 使用 easing.js 特效
+		//duration: 1200,			// 設定特效時間
+		draggable: true
+	};
+</script>
+</body>
+</html>
