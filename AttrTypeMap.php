@@ -15,7 +15,7 @@ _TEXT_;
 <button id="mapTrigger_{$oAttribute->name}">Map</button><div></div>
 <input type="hidden" name="content[attributes][attr_id][$key]" value="{$oAttribute->id}" />
 <script type="text/javascript">
-$('#mapTrigger_{$oAttribute->name}').click(AttrTypeMapFunc);
+$('#mapTrigger_{$oAttribute->name}').click(function(){AttrTypeMapFunc(this)});
 </script>
  */
 ?>
