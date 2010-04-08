@@ -1,2 +1,15 @@
-Documentation on here:
+Google Docs 文件說明如下:
 http://docs.google.com/Doc?docid=0AUZg-tVAE8VuZGZjeno5cm1fNDg5aHh6dGp3Z3g&hl=zh_TW
+
+2010/04/08:
+1.將物件中使用到 GMaps 的縮放等級屬性由 "depth" 改為 "zoom", 以符合 GMaps API 介面參數。
+2.上述 Google Docs 中文件說明一併修訂。
+3.GMaps 中有關縮放等級(zoom level)的範圍不容易找到明確的大小, 似乎是20個等級。
+  有一說法為 1~18, 加上下極距(0,19)共20等級。但根據 GMap API v2 升級指南中卻說:
+  http://code.google.com/intl/zh-TW/apis/maps/documentation/upgrade.html#ZoomLevelOrder
+  從 GMap 升級到 GMap2
+  縮放等級順序
+  GMap2 中的縮放等級索引是從 0 開始，這是最粗略的等級，而不是最佳等級。
+  這樣可以允許任何高解析度，而讓我們可以更輕鬆地引進高解析度的圖片。
+  您可以使用下列公式，在舊和新的縮放等級之間進行轉換：
+        newZoom = 17 - oldZoom

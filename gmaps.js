@@ -16,7 +16,7 @@
  *		latitude	: 25.04154,
  *		longitude	: 121.54375,
  *		//geocode	: '台北市捷運忠孝復興站',
- *		depth		: 12,
+ *		zoom		: 12,
  *		span		: 120,				//*每次點選 itemList 保留的上下距離
  *		easing		: 'swing',			//*移動所選 itemList 的特效演算法: linear 或使用 easing.js
  *		duration	: 600,				//*移動所選 itemList 的特效時間(ms)
@@ -48,8 +48,8 @@
  * var myMap = 圖資操作物件, 其操作方法如下:
  *	setCenter(opts)
  *		將地圖移到中心點
- *		opts 為物件同 MapOptions 前4項(latitude,longitude,geocode,depth)
- *		若有 geocode 優先採用之, 否則使用經緯度座標, 若未指定 depth 維持現有深度
+ *		opts 為物件同 MapOptions 前4項(latitude,longitude,geocode,zoom)
+ *		若有 geocode 優先採用之, 否則使用經緯度座標, 若未指定 zoom 維持現有縮放等級
  *	setListTemplate(selector)
  *		設定清單模版
  *		selector 為 CSS Selector 或模版字串(含<tag>)
@@ -226,24 +226,24 @@ function initialize(GM, $, opts) {	// GM=google.maps, $=jQuery
 
 	function setCenter(_opts) {
 		var geocode = _opts.geocode,
-			depth = _opts.depth;
-		if (depth == null) depth = gMap.getZoom();
+			zoom = _opts.zoom;
+		if (zoom == null) zoom = gMap.getZoom();
 		if (geocode) {
 			opts.geocode = geocode;
 			LocateGeocode(geocode,function(center, geocode) {
-				gMap.setCenter(center,depth);
+				gMap.setCenter(center,zoom);
 				opts.latitude = center.lat();
 				opts.longitude = center.lng();
 	  		});
 		} else {
 			var lat = _opts.latitude,
 				lng = _opts.longitude;
-			gMap.setCenter(LatLng(lat,lng),depth);
+			gMap.setCenter(LatLng(lat,lng),zoom);
 			delete opts.geocode;
 			opts.latitude = lat;
 			opts.longitude = lng;
 		}
-		opts.depth = depth;
+		opts.zoom = zoom;
 	}
 //--------------------------------------------------------------------------
 
@@ -380,7 +380,7 @@ G.setOnLoadCallback(function() {
 		MapOptions = $.extend({
 				latitude	: 25.04154,
 				longitude	: 121.54375,
-				depth		: 12,
+				zoom		: 12,
 				span		: 120,			//*每次移動 itemList 保留上下距離
 				easing		: 'swing',		//*移動所選 itemList 的特效演算法
 				duration	: 600,			//*移動所選 itemList 的特效時間(ms)

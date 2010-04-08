@@ -23,7 +23,7 @@ ob_start();
  *		latitude: 緯度,
  *		longitude: 經度,
  *		geocode: '地址',			// 若有 geocode 則取代經緯度座標
- *		depth: 0~19				// 縮放級距, 省略表示使用現有級距
+ *		zoom: 0~19				// 縮放等級, 省略表示使用現有縮放等級
  *	},
  *	Markers: [
  *		{ // 圖標1
@@ -54,7 +54,7 @@ $twC = array(
 		'latitude'	=> 25.04154,
 		'longitude'	=> 121.54375,
 		//'geocode'	=> '台北市捷運忠孝復興站',
-		'depth'		=> 11
+		'zoom'		=> 11
 	);
 $tw[] = array(
 		'latitude'	=> 25.049622,
@@ -124,7 +124,7 @@ $cnC = array(
 		'latitude'	=> 28.709860,
 		'longitude'	=> 116.323242,
 		//'geocode'	=> '中國湖南省南昌市',
-		'depth'		=> 5
+		'zoom'		=> 5
 	);
 $cn[] = array(
 		'latitude'	=> 31.259769,
@@ -158,7 +158,7 @@ $hkC = array(
 		'latitude'	=> 22.309425,
 		'longitude'	=> 114.171295,
 		//'geocode'	=> '香港九龍',
-		'depth'		=> 11
+		'zoom'		=> 11
 	);
 //--------------------------------------------------------
 
