@@ -97,5 +97,7 @@ function AttrTypeMapFunc(elem) {
 
 		});
 	}
+
 	$block.slideDown();	//show();
+	return false;		// Prevent default action
 }

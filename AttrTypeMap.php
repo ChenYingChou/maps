@@ -6,7 +6,7 @@ $oAttribute = (object)$a;
 
 $formHTML = <<<_TEXT_
 <input type="text" class="text medium" name="content[attributes][data][$key]" id="frmFieldName_{$oAttribute->name}" value="{$oAttribute->value}" />
-<button onclick="AttrTypeMapFunc(this)">Map</button>
+<button onclick="return AttrTypeMapFunc(this)">Map</button>
 <input type="hidden" name="content[attributes][attr_id][$key]" value="{$oAttribute->id}" />
 _TEXT_;
 
@@ -15,7 +15,7 @@ _TEXT_;
 <button id="mapTrigger_{$oAttribute->name}">Map</button><div></div>
 <input type="hidden" name="content[attributes][attr_id][$key]" value="{$oAttribute->id}" />
 <script type="text/javascript">
-$('#mapTrigger_{$oAttribute->name}').click(function(){AttrTypeMapFunc(this)});
+$('#mapTrigger_{$oAttribute->name}').click(function(){return AttrTypeMapFunc(this)});
 </script>
  */
 ?>

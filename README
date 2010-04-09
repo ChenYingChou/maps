@@ -32,3 +32,11 @@ http://docs.google.com/Doc?docid=0AUZg-tVAE8VuZGZjeno5cm1fNDg5aHh6dGp3Z3g&hl=zh_
   函式時, 把這個 button DOM 設為目前物件(this)。但再思考, 此時將這個 DOM 做為
   參數較不容易產生混淆, 畢竟 AttrTypeMapFunc 只是一個獨立函式, 要針對這個 DOM
   做某些動作, 並不須視為某一個物件的方法來執行。
+
+2010/04/09:
+1.AttrTypeMapFunc() 最後一定返回 false, 因此在按鈕事件觸發執行時會阻止原本
+  預設動作(例如送出表單)。
+2.AttrTypeMap.php 產生的按鈕事件改為:
+  onclick="return AttrTypeMapFunc(this)"
+
+
