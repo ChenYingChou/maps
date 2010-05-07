@@ -367,15 +367,15 @@ function initialize(GM, $, opts) {	// GM=google.maps, $=jQuery
 // end of initialize()
 
 G.load('maps','2.x',{'other_params':'sensor=false'});
-G.load('jquery','1');
+if (!window.jQuery) G.load('jquery','1');
 
 G.setOnLoadCallback(function() {
-	// 模版源碼 http://github.com/nje/jquery-tmpl, 以 google-compiler 編譯如下:( 1525 bytes)
-	(function(b){var m=b.fn.domManip,n=/^[^<]*(<[\w\W]+>)[^>]*$/;b.fn.extend({render:function(a,c){return this.map(function(d,f){return b.render(f,a,c)})},domManip:function(a){if(a.length>1&&a[0].nodeType)arguments[0]=[b.makeArray(a)];if(a.length>=2&&typeof a[0]==="string"&&typeof a[1]!=="string")arguments[0]=[b.render(a[0],a[1],a[2])];return m.apply(this,arguments)}});b.extend({render:function(a,c,d){function f(){var h=null;if(!j||j(i)!==false){h=e(b,i);k&&k(i,h)}return h}var e,g;if(typeof a==="string"){e=
-		b.templates[a];if(!e&&!n.test(a))g=b(a).get(0)}else if(a instanceof b)g=a.get(0);else if(a.nodeType)g=a;if(!e&&g){var l=b.data(g);e=l.tmpl||(l.tmpl=b.tmpl(g.innerHTML))}e=e||b.tmpl(a);var j,k,i={data:c,index:0,dataItem:c,options:d||{}};if(d){j=d.rendering;k=d.rendered}return b.isArray(c)?b.map(c,function(h,o){i.index=o;i.dataItem=h;return f()}):f()},templates:{},tmplFn:{html:function(){b._.push.apply(b._,arguments)},text:function(){b._.push.apply(b._,b.map(arguments,function(a){return document.createTextNode(a).nodeValue}))}},
-		_:null,tmpl:function(a,c,d,f){a=new Function("jQuery","$context","var $=jQuery,$data=$context.dataItem,$i=$context.index,_=$._=[];_.context=$context;with($.tmplFn){with($data){_.push('"+a.replace(/[\r\t\n]/g," ").replace(/'(?=[^%]*%})/g,"\t").split("'").join("\\'").split("\t").join("'").replace(/{%=(.+?)%}/g,"',($1),'").split("{%").join("');").split("%}").join("_.push('")+"');}}return $(_.join('')).get();");return c?a(b,{data:null,dataItem:c,index:d,options:f}):a}})})(jQuery);
+	// 模版源碼 2010/05/01 http://github.com/nje/jquery-tmpl, 以 google-compiler 編譯如下:( 1773 bytes)
+	(function(b){var j=b.fn.domManip,k=/^[^<]*(<[\w\W]+>)[^>]*$/;b.fn.extend({render:function(a,d){return this.map(function(h,e){return b.render(e,a,d)})},domManip:function(a){if(a.length>1&&a[0].nodeType)arguments[0]=[b.makeArray(a)];if(a.length>=2&&typeof a[0]==="string"&&typeof a[1]!=="string")arguments[0]=[b.render(a[0],a[1],a[2])];return j.apply(this,arguments)}});b.extend({render:function(a,d,h){var e,c;if(typeof a==="string"){e=b.templates[a];if(!e&&!k.test(a))c=b(a).get(0)}else if(a instanceof
+		b)c=a.get(0);else if(a.nodeType)c=a;if(!e&&c){a=b.data(c);e=a.tmpl||(a.tmpl=b.tmpl(c.innerHTML))}var g={data:d,index:0,dataItem:d,options:h||{}};return b.isArray(d)?b.map(d,function(f,i){g.index=i;g.dataItem=f;return e.call(f,b,g)}):e.call(d,b,g)},templates:{},tmplcmd:{each:{_default:[null,"$i"],prefix:"jQuery.each($1,function($2){with(this){",suffix:"}});"},"if":{prefix:"if($1){",suffix:"}"},"else":{prefix:"}else{"},html:{prefix:"_.push(typeof ($1)==='function'?($1).call(this):$1);"},"=":{_default:["this"],
+		prefix:"_.push($.encode(typeof ($1)==='function'?($1).call(this):$1));"}},encode:function(a){return a!=null?document.createTextNode(a.toString()).nodeValue:""},tmpl:function(a,d,h,e){a=new Function("jQuery","$context","var $=jQuery,$data=$context.dataItem,$i=$context.index,_=[];_.data=$data;_.index=$i;with($data){_.push('"+a.replace(/[\r\t\n]/g," ").replace(/\${([^}]*)}/g,"{{= $1}}").replace(/{{(\/?)(\w+|.)(?:\((.*?)\))?(?: (.*?))?}}/g,function(c,g,f,i,l){c=b.tmplcmd[f];if(!c)throw"Template not found: "+
+		f;f=c._default;return"');"+c[g?"suffix":"prefix"].split("$1").join(l||(f?f[0]:"")).split("$2").join(i||(f?f[1]:""))+"_.push('"})+"');};return $(_.join('')).get();");return d?a.call(this,b,{data:null,dataItem:d,index:h,options:e}):a}})})(jQuery);
 
-	jQuery.noConflict();
 	jQuery(function($) {
 		MapOptions = $.extend({
 				latitude	: 25.04154,

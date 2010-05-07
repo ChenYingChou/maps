@@ -22,3 +22,11 @@
 # AttrTypeMapFunc() 最後一定返回 false, 因此在按鈕事件觸發執行時會阻止原本預設動作(例如送出表單)。
 # AttrTypeMap.php 產生的按鈕事件改為:<br>@onclick="return AttrTypeMapFunc(this)"@
 
+<br>*2010/05/08:*
+# 模版源碼(http://github.com/nje/jquery-tmpl)更新到  2010/05/01, 但第 45~47 行的 else 應註記掉: <br><pre>  @} /* else {
+                fn = jQuery.tmpl( tmpl );
+            } */@
+</pre>
+# 新模版的變數替換由 *<%= 物件屬性 %>* 改為 *${物件屬性}*, 更新 index.html 中的模版。
+# gmaps.js 中先檢查若已載入 jQuery 就不再呼叫載入 Google AJAX jQuery, 同時也不再執行 @jQuery.noConflict()@。
+ 
