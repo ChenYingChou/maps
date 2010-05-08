@@ -1,5 +1,7 @@
 [文件說明連結在此](http://docs.google.com/Doc?docid=0AUZg-tVAE8VuZGZjeno5cm1fNDg5aHh6dGp3Z3g&hl=zh_TW "Google Docs")
 
+[README.md 編輯說明](http://daringfireball.net/projects/markdown/syntax)
+
 --------
 
 ### 2010/04/08(1)
@@ -31,10 +33,29 @@
 --------
 
 ### 2010/05/08:
-1. [模版源碼](http://github.com/nje/jquery-tmpl)更新到 2010/05/01, 但第 45~47 行的 `else { ... }` 應註記掉:
-        } /* else {
-            fn = jQuery.tmpl( tmpl );
-        } */
+1. [模版源碼](http://github.com/nje/jquery-tmpl)更新到 2010/05/01, 但應修改如下:
+		--- tmpl.nje   2010-05-01 00:05:24.000000000 +0800
+		+++ tmpl.js    2010-05-08 23:58:38.000000000 +0800
+		@@ -39,12 +39,13 @@
+					if ( typeof tmpl === "string" ) {
+						// Use a pre-defined template, if available
+						fn = jQuery.templates[ tmpl ];
+		-				if ( !fn && !htmlExpr.test( tmpl ) ) {
+		-					// it is a selector
+		-					node = jQuery( tmpl ).get( 0 );
+		-				}
+		-				else {
+		-					fn = jQuery.tmpl( tmpl );
+		+				if ( !fn ) {
+		+					if ( htmlExpr.test( tmpl ) ) {
+		+						fn = jQuery.tmpl( tmpl );
+		+					} else {
+		+						// it is a selector
+		+						node = jQuery( tmpl ).get( 0 );
+		+					}
+						}
+					} else if ( tmpl instanceof jQuery ) {
+						node = tmpl.get( 0 );
 2. 新模版的變數替換由 `<%= 物件屬性 %>` 改為 `${物件屬性}`, 更新 index.html 中的模版。
 3. gmaps.js 中先檢查若已載入 jQuery 就不再呼叫載入 Google AJAX jQuery, 同時也不再執行 `jQuery.noConflict()`。
  
