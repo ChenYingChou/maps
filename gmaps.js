@@ -370,6 +370,7 @@ G.load('maps','2.x',{'other_params':'sensor=false'});
 if (!window.jQuery) G.load('jquery','1');
 
 G.setOnLoadCallback(function() {
+	// 新版模版規則: http://forum.jquery.com/topic/templating-syntax
 	// 模版源碼 2010/05/01 http://github.com/nje/jquery-tmpl, 以 google-compiler 編譯如下:( 1773 bytes)
 	(function(b){var j=b.fn.domManip,k=/^[^<]*(<[\w\W]+>)[^>]*$/;b.fn.extend({render:function(a,d){return this.map(function(h,e){return b.render(e,a,d)})},domManip:function(a){if(a.length>1&&a[0].nodeType)arguments[0]=[b.makeArray(a)];if(a.length>=2&&typeof a[0]==="string"&&typeof a[1]!=="string")arguments[0]=[b.render(a[0],a[1],a[2])];return j.apply(this,arguments)}});b.extend({render:function(a,d,h){var e,c;if(typeof a==="string"){e=b.templates[a];if(!e&&!k.test(a))c=b(a).get(0)}else if(a instanceof
 		b)c=a.get(0);else if(a.nodeType)c=a;if(!e&&c){a=b.data(c);e=a.tmpl||(a.tmpl=b.tmpl(c.innerHTML))}var g={data:d,index:0,dataItem:d,options:h||{}};return b.isArray(d)?b.map(d,function(f,i){g.index=i;g.dataItem=f;return e.call(f,b,g)}):e.call(d,b,g)},templates:{},tmplcmd:{each:{_default:[null,"$i"],prefix:"jQuery.each($1,function($2){with(this){",suffix:"}});"},"if":{prefix:"if($1){",suffix:"}"},"else":{prefix:"}else{"},html:{prefix:"_.push(typeof ($1)==='function'?($1).call(this):$1);"},"=":{_default:["this"],
