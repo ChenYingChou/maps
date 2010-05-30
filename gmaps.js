@@ -21,6 +21,7 @@
  *		easing		: 'swing',			//*移動所選 itemList 的特效演算法: linear 或使用 easing.js
  *		duration	: 600,				//*移動所選 itemList 的特效時間(ms)
  *		draggable	: false,			//*圖標是否可移動
+ *	//	icon		: {...GIcon...},	// GIcon
  *		gmaps		: '#gmaps',			// CSS Selector
  *		itemList	: '#itemList',		// CSS Selector 或模版字串(含<tag>)
  *		tmplList	: '#tmplList',		// CSS Selector 或模版字串(含<tag>)
@@ -46,6 +47,10 @@
  *
  * 開始執行後依 MapOptions 及 myMarkers 的內容建立地圖及圖標清單,
  * var myMap = 圖資操作物件, 其操作方法如下:
+ *	map
+ *		返回 GMap2 物件
+ *	markers
+ *		返回 markers 圖標物件陣列, 內容如上述 myMakers 說明。
  *	setCenter(opts)
  *		將地圖移到中心點
  *		opts 為物件同 MapOptions 前4項(latitude,longitude,geocode,zoom)
@@ -178,9 +183,41 @@ function initialize(GM, $, opts) {	// GM=google.maps, $=jQuery
 		});
 	}
 
+	function fixGIcon(xIcon, icon) {
+		if ($.isPlainObject(icon)) {
+			for (var key in icon) {
+				var val = icon[key];
+				if ($.isPlainObject(val)) {
+					if (val.width !== undefined) {
+						xIcon[key] = new GSize(val.width,val.height);
+					} else if (val.x !== undefined) {
+						xIcon[key] = new GPoint(val.x,val.y);
+					}
+				} else {
+					xIcon[key] = val;
+				}
+			}
+			var A = icon.iconSize;
+			if (A !== undefined) {
+				if (icon.iconAnchor === undefined) {
+					xIcon.iconAnchor = new GPoint(Math.round(A.width/2)-1,A.height-1);
+				}
+				if (icon.infoWindowAnchor === undefined) {
+					xIcon.infoWindowAnchor = new GPoint(Math.round(A.width/2)-1,0);
+				}
+				if (icon.imageMap === undefined) {
+					xIcon.imageMap = [0,0, 0,A.height-1, A.width-1,A.height-1, A.width-1,0];
+				}
+			}
+		}
+	}
+
 	function NewMarker(center, icon, mOpts) {
 		var xIcon = new GM.Icon(G_DEFAULT_ICON);
-		if (icon) $.extend(true,xIcon,icon);
+		if (icon || opts.icon) {
+			var yIcon = $.extend({},opts.icon,icon);
+			fixGIcon(xIcon,yIcon);
+		}
 		return new GM.Marker(center,$.extend({},mOpts,{icon:xIcon}));
 	}
 
@@ -251,6 +288,9 @@ function initialize(GM, $, opts) {	// GM=google.maps, $=jQuery
 		map: function() {
 			return gMap;
 		},
+		markers: function() {
+			return markers;
+		},
 		setCenter: function(opts) {
 			setCenter(opts);
 		},
@@ -293,9 +333,12 @@ function initialize(GM, $, opts) {	// GM=google.maps, $=jQuery
 					}
 
 					if (typeof s !== 'string') {
-						if (opts.draggable && point == null) point = this.getLatLng();
-						s = (opts.draggable ? '<b>Lat='+point.y+', Long='+point.x+'</b><br/>' : '') +
-							$('<div/>').append(tmplInfo,marker).html();
+						s = $('<div/>').append(tmplInfo,marker).html();
+						if (opts.draggable) {
+							if (point == null) point = this.getLatLng();
+							s = '<b>Lat=' + point.y.toFixed(6) + ', Long=' +
+								point.x.toFixed(6) + '</b><br/>' + s;
+						}
 					}
 					this.openInfoWindowHtml(s);
 
@@ -331,28 +374,30 @@ function initialize(GM, $, opts) {	// GM=google.maps, $=jQuery
 				}
 				$.each(data,function(name, value) {
 					switch (name.toLowerCase()) {
-						case 'tmpllist':
+						case 'tmpllist':	// 清單模版
 							setTemplate(tmplList,value);
 							break;
-						case 'tmplinfo':
+						case 'tmplinfo':	// 圖標視窗模版
 							setTemplate(tmplInfo,value);
 							break;
-						case 'center':
+						case 'center':		// 地圖中心位置(latitude,longitude,geocode,zoom)
 							setCenter(value);
 							break;
-						case 'clear':
+						case 'clear':		// 清除地圖上現有圖標
 							self.clearMarkers();
 							break;
-						case 'markers':
+						case 'markers':		// 全新的圖標: 先清除地圖上現有圖標
 							self.newMarkers(value);
 							break;
-						case 'addmarkers':
+						case 'addmarkers':	// 增加新的圖標
 							self.addMarkers(value);
 							break;
-						case 'message':
+						case 'message':		// 顯示訊息
 							alert(value);
 							break;
-						default:
+						case 'attachment':	// 使用者夾帶資料, 不處理
+							break;
+						default:			// 其他視同錯誤
 							if (window.JSON && window.JSON.stringify) {
 								value = window.JSON.stringify(value);
 							}

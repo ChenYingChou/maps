@@ -54,70 +54,176 @@ $twC = array(
 		'latitude'	=> 25.04154,
 		'longitude'	=> 121.54375,
 		//'geocode'	=> '台北市捷運忠孝復興站',
-		'zoom'		=> 11
+		'zoom'		=> 13
 	);
 $tw[] = array(
-		'latitude'	=> 25.049622,
-		'longitude'	=> 121.551104,
-		'name'		=> '經通國際專利商標事務所',
-		'address'	=> '台北市八德路三段20號5樓之3',
-		'phone'		=> '886-2-2570-1010',
-		'email'		=> 'finetpat@ms26.hinet.net',
-		'url'		=> 'http://www.finetpat.com.tw/'
+		'latitude'	=> 25.044176,
+		'longitude'	=> 121.545333,
+		'name'		=> 'AHouse',
+		'address'	=> '台北市復興南路一段107巷5弄18號1樓',
+		'phone'		=> '',
+		'email'		=> '',
+		'url'		=> 'http://ahouse.vocalasia.com',
+		'rss'		=> 'http://picasaweb.google.com.tw/data/feed/base/user/Chen.YingChou/albumid/5103036971715540641?alt=rss&kind=photo&authkey=Gv1sRgCN6Z1ZK104KW6QE&hl=zh_TW'
 	);
 $tw[] = array(
-		'latitude'	=> 25.041713,
-		'longitude'	=> 121.550906,
-		'name'		=> 'Henry電腦工作室',
-		'address'	=> '台北市大安區忠孝東路四段 183號',
-		'phone'		=> '886-2-8771-5352',
-		'email'		=> 'henryruan@gmail.com',
-		'url'		=> 'http://henryjuan.com/'
+		'latitude'	=> 25.036754,
+		'longitude'	=> 121.547634,
+		'name'		=> 'akuma caca',
+		'address'	=> '台北市大安區四維路14巷6號B1',
+		'phone'		=> '',
+		'email'		=> '',
+		'url'		=> 'http://akumacaca.pixnet.net/blog',
+		'rss'		=> 'http://api.flickr.com/services/feeds/photoset.gne?set=72157623601084457&nsid=27624965@N08&lang=zh-hk'
 	);
 $tw[] = array(
-		'latitude'	=> 25.045278,
-		'longitude'	=> 121.577778,
-		'name'		=> '經通資訊',
-		'address'	=> '台北市信義區松山路204巷6號3樓',
-		'phone'		=> '886-2-8787-4001',
-		'email'		=> 'service@finenet.com.tw',
-		'url'		=> 'http://finenet.com.tw/'
+		'latitude'	=> 25.043204,
+		'longitude'	=> 121.510036,
+		'name'		=> '台北市中山堂',
+		'address'	=> '台北市延平南路98號',
+		'phone'		=> '',
+		'email'		=> '',
+		'url'		=> 'http://w2.csh.taipei.gov.tw/',
+		'rss'		=> 'http://picasaweb.google.com.tw/data/feed/base/user/Chen.YingChou/albumid/5471950480549692545?alt=rss&kind=photo&hl=zh_TW'
 	);
 $tw[] = array(
-		'latitude'	=> 25.110471,
-		'longitude'	=> 121.684570,
-		'name'		=> '經通國際專利商標事務所-1',
-		'address'	=> '台北市八德路三段20號5樓之3',
-		'phone'		=> '886-2-2570-1010',
-		'email'		=> 'finetpat@ms26.hinet.net',
-		'url'		=> 'http://www.finetpat.com.tw/'
+		'latitude'	=> 25.036731,
+		'longitude'	=> 121.519033,
+		'name'		=> '國家音樂廳',
+		'address'	=> '台北市中正區中山南路21-1號',
+		'phone'		=> '',
+		'email'		=> '',
+		'url'		=> 'http://www.ntch.edu.tw/'
 	);
 $tw[] = array(
-		'latitude'	=> 24.983568,
-		'longitude'	=> 121.360473,
-		'name'		=> 'Henry電腦工作室-1',
-		'address'	=> '台北市大安區忠孝東路四段 183號',
-		'phone'		=> '886-2-8771-5352',
-		'email'		=> 'henryruan@gmail.com',
-		'url'		=> 'http://henryjuan.com/'
+		'latitude'	=> 25.048336,
+		'longitude'	=> 121.551900,
+		'name'		=> '台北市社教館',
+		'address'	=> '台北市松山區八德路3段25號',
+		'phone'		=> '',
+		'email'		=> '',
+		'url'		=> 'http://www.tmseh.gov.tw'
 	);
-$tw[] = array(
-		'latitude'	=> 24.871486,
-		'longitude'	=> 121.223144,
-		'name'		=> '經通資訊-1',
-		'address'	=> '台北市信義區松山路204巷6號3樓',
-		'phone'		=> '886-2-8787-4001',
-		'email'		=> 'service@finenet.com.tw',
-		'url'		=> 'http://finenet.com.tw/'
+
+$twA[] = array(
+		'datetime'	=> '2010/06/01 20:00',			// 時間
+		'venue'		=> 'AHouse',					// 場所
+		'group'		=> 'Stouxingers',				// 表演團體
+		'image'		=> 'http://lh3.ggpht.com/_Uhh0svybYgM/S_ZoNw2RnAI/AAAAAAAAADs/s9_jP4GYaH4/tbn_stoux.jpg',
+		'url'		=> 								// 連結網址
+			'http://ahouse.vocalasia.com/index.php/2010/05/21/stouxingers/',
+//		'synopsis'	=>								// 簡介
+//			'對於 Stouxingers 來說, 人聲重唱不僅僅是用他們自己的聲音, 創造出合諧的旋律'
 	);
-$tw[] = array(
-		'latitude'	=> 24.694438,
-		'longitude'	=> 121.269836,
-		'name'		=> '經通國際專利商標事務所-2',
-		'address'	=> '台北市八德路三段20號5樓之3',
-		'phone'		=> '886-2-2570-1010',
-		'email'		=> 'finetpat@ms26.hinet.net',
-		'url'		=> 'http://www.finetpat.com.tw/'
+$twA[] = array(
+		'datetime'	=> '2010/06/03 20:00',			// 時間
+		'venue'		=> 'AHouse',					// 場所
+		'group'		=> 'Blis-sing',					// 表演團體
+		'image'		=> 'http://lh5.ggpht.com/_Uhh0svybYgM/S_ugnFB5yLI/AAAAAAAAAE4/R5953U9umyA/blissing.jpg',
+		'url'		=> 								// 連結網址
+			'http://ahouse.vocalasia.com/index.php/2010/05/25/blissing/',
+//		'synopsis'	=>								// 簡介
+//			'不理性, 是我們對音樂的熱情, 也是團員們所共同擁有的神奇特質...'
+	);
+$twA[] = array(
+		'datetime'	=> '2010/06/04 20:00',			// 時間
+		'venue'		=> 'AHouse',					// 場所
+		'group'		=> 'Oops',						// 表演團體
+		'image'		=> 'http://lh6.ggpht.com/_Uhh0svybYgM/S_unZa6lKBI/AAAAAAAAAFE/VlAqENAwX6w/oops.jpg',
+		'url'		=> 								// 連結網址
+			'http://ahouse.vocalasia.com/index.php/2010/05/25/oops/',
+//		'synopsis'	=>								// 簡介
+//			'由前任團長張騏嬿及副團長兼音樂總監陳薇如號召了國立台南藝術大學應用音樂學系志同道合的...'
+	);
+$twA[] = array(
+		'datetime'	=> '2010/06/05 20:00',			// 時間
+		'venue'		=> 'AHouse',					// 場所
+		'group'		=> '公共澡堂',					// 表演團體
+		'image'		=> 'http://lh5.ggpht.com/_Uhh0svybYgM/S_og2PEutKI/AAAAAAAAAEQ/FmsaCK4pdwE/%E5%85%AC%E5%85%B1%E6%BE%A1%E5%A0%82.jpg',
+		'url'		=> 								// 連結網址
+			'http://ahouse.vocalasia.com/index.php/2010/05/24/thepublicbathhouse/',
+//		'synopsis'	=>								// 簡介
+//			'緣起於創團團長蔡子雍高中時期首次接觸阿卡貝拉, 驚豔於阿卡貝拉音樂散發的魅力...'
+	);
+$twA[] = array(
+		'datetime'	=> '2010/06/19  20:00',			// 時間
+		'venue'		=> 'AHouse',					// 場所
+		'group'		=> '神秘失控',					// 表演團體
+		'image'		=> 'http://lh5.ggpht.com/_Uhh0svybYgM/S_pHF-FfbrI/AAAAAAAAAEg/bfAPlL5j4H4/semi.jpg',
+		'url'		=> 								// 連結網址
+			'http://ahouse.vocalasia.com/index.php/2010/05/24/semiscon/',
+//		'synopsis'	=>								// 簡介
+//			'神秘失控人聲樂團 成立於2002年，是台灣第一個以純人聲形式演出的專業樂團'
+	);
+$twA[] = array(
+		'datetime'	=> '2010/06/26 20:00',			// 時間
+		'venue'		=> 'AHouse',					// 場所
+		'group'		=> '雙下巴',						// 表演團體
+		'image'		=> 'http://lh3.ggpht.com/_Uhh0svybYgM/S_uTDTBaTNI/AAAAAAAAAEw/eLOVowbAd28/%E6%9C%AA%E5%91%BD%E5%90%8D%20-1.jpg',
+		'url'		=> 								// 連結網址
+			'http://ahouse.vocalasia.com/index.php/2010/05/25/doublechinsingers/',
+//		'synopsis'	=>								// 簡介
+//			'國內首支由合唱藝術界跨入流行音樂領域的純男聲重唱團體-「雙下巴重唱團」'
+	);
+$twA[] = array(
+		'datetime'	=> '2010/06/07 20:00',			// 時間
+		'venue'		=> 'AHouse',					// 場所
+		'group'		=> '七巧板',						// 表演團體
+		'image'		=> 'http://avatars.plurk.com/6285182-medium6.gif',
+		'url'		=> 								// 連結網址
+			'http://ahouse.vocalasia.com/',
+//		'synopsis'	=>								// 簡介
+//			'七巧板人聲樂團'
+	);
+$twA[] = array(
+		'datetime'	=> '2010/06/27 20:00',			// 時間
+		'venue'		=> 'AHouse',					// 場所
+		'group'		=> '海鷗K',						// 表演團體
+		'image'		=> 'http://avatars.plurk.com/6285182-medium6.gif',
+		'url'		=> 								// 連結網址
+			'http://ahouse.vocalasia.com/',
+//		'synopsis'	=>								// 簡介
+//			'海鷗K人聲樂團'
+	);
+$twA[] = array(
+		'datetime'	=> '2010/06/05 19:00',			// 時間
+		'venue'		=> '台北市中山堂',				// 場所
+		'group'		=> '有趣的照片',					// 表演團體
+		'image'		=> 'http://lh3.ggpht.com/_BgB_Kqy9z9M/S_BF-IzSeEI/AAAAAAAAE1w/-jcUu03fYco/s288/4b9db3b4354ae.jpg',
+		'url'		=> 								// 連結網址
+			'http://picasaweb.google.com/Chen.YingChou/GvnWUH',
+		'synopsis'	=>								// 簡介
+			'悠閒的午後, 輕柔樂聲飄來, 眼神不禁迷惘, 漸漸的神遊太虛...'
+	);
+$twA[] = array(
+		'datetime'	=> '2010/06/12 19:00',			// 時間
+		'venue'		=> '台北市中山堂',				// 場所
+		'group'		=> '有趣的照片',					// 表演團體
+		'image'		=> 'http://lh5.ggpht.com/_BgB_Kqy9z9M/S_BF-DzUxyI/AAAAAAAAE1w/W980MEjtuNY/s288/4b9db29ab5fc3.jpg',
+		'url'		=> 								// 連結網址
+			'http://picasaweb.google.com/Chen.YingChou/GvnWUH',
+		'synopsis'	=>								// 簡介
+			'1-2-3-4, 2-2-3-4, 跟著動, 別摸魚! 否則以後大腹便便, 別怪老爸沒警告過你!'
+	);
+$twA[] = array(
+		'datetime'	=> '2010/06/19 19:00',			// 時間
+		'venue'		=> '台北市中山堂',				// 場所
+		'group'		=> '有趣的照片',					// 表演團體
+		'image'		=> 'http://lh4.ggpht.com/_BgB_Kqy9z9M/S_BF-GJP5OI/AAAAAAAAE1w/pMT2pLMeUh8/s288/4bd197a360d38.jpg',
+		'url'		=> 								// 連結網址
+			'http://picasaweb.google.com/Chen.YingChou/GvnWUH',
+		'synopsis'	=>								// 簡介
+			'看我的本領, 漫妙的舞姿和技巧, 遠勝那大漠的射鵰英雄!'
+	);
+$twA[] = array(
+		'datetime'	=> '2010/06/26 19:00',			// 時間
+		'venue'		=> '台北市中山堂',				// 場所
+		'group'		=> '有趣的照片',					// 表演團體
+		'image'		=> 'http://lh3.ggpht.com/_BgB_Kqy9z9M/S_BF-PjilZI/AAAAAAAAE1w/61KQjZSRuBA/s288/4b98452ad0dd2.jpg',
+		'url'		=> 								// 連結網址
+			'http://picasaweb.google.com/Chen.YingChou/GvnWUH',
+		'synopsis'	=>								// 簡介
+			'看! 誰說媽咪不會罰我們尿床, 這會兒連大伙都一塊洗, 晾在這!'
 	);
 //--------------------------------------------------------
 $cnC = array(
@@ -163,8 +269,9 @@ $hkC = array(
 //--------------------------------------------------------
 
 function ProcCountry($country) {
-	global $twC, $tw, $cnC, $cn, $hkC, $hk;
+	global $twC, $tw, $twA, $cnC, $cn, $hkC, $hk;
 	$rs = array();
+	$rs['Attachment'] = array();		// 使用者自訂附加資料
 	switch ($country) {
 		case 'cn':
 			$rs['Center'] = $cnC;
@@ -177,6 +284,7 @@ function ProcCountry($country) {
 		case 'tw':
 			$rs['Center'] = $twC;
 			$rs['Markers'] = $tw;
+			$rs['Attachment']['Activities'] = $twA;
 			break;
 		case 'jp':
 			$rs['Message'] = '... 資料蒐集中  ...';

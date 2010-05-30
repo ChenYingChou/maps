@@ -5,19 +5,19 @@ html, body {
 }
 
 .header {
-	text-align: left;
-	white-space: nowrap;
-	padding: 10px;
-	font: 1em Verdana;
-	color: LightCyan;
 	background-color: #2d444f;
+	color: LightCyan;
+	font: 1em Verdana;
 	width: 100%;
 	height: 60px;
+	padding: 10px;
+	text-align: left;
+	white-space: nowrap;
 }
 
 .content {
+	font-size: 14px;
 	width: 100%;
-	height: 500px;
 	overflow: hidden;
 }
 
@@ -36,38 +36,61 @@ html, body {
 	width: 24%;
 }
 
+.content:after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
 .footer {
-	font: 0.75em normal;
+	clear: both;
 	color: #5e8eab;
+	font: 0.75em normal;
+	margin: 5px 5px 0;
 	border-top: solid 9px #5e8eab;
 	padding: 4px 0;
-	margin: 5px 5px 0;
 	text-align: center;
-	clear: both;
 }
 
 .bar {
-	height: 5px;
-	display: block;
-	margin: 2px 1px;
 	background-color: red;
+	display: block;
+	height: 5px;
+	margin: 2px 1px;
 }
 
-dl {
+#gmaps_bar {
+	background-color: #669;
+	cursor: pointer;
+	height: 8px;
+}
+#gmaps_bar:hover {
+	background-color: #c66;
+}
+
+/* dl - dt - dd */
+.content dl {
 	margin: 0;
 }
-
-dd a {
+.content dt a {
 	background: url("external.png") no-repeat scroll right center transparent;
 	padding-right: 15px;
 	text-decoration: none;
 }
+.content dd {
+	margin: 0 2px 0 14px;
+	overflow: hidden;
+	white-space: nowrap;
+}
 
 .toMarker {
 	background-color: Khaki;
-	border: 1px solid lightGray; 
-	margin: 0;
 	cursor: help;
+	margin: 0;
+	border: 1px solid lightGrey; 
 }
 
 .selMarker {
@@ -75,6 +98,72 @@ dd a {
 	border: 1px dashed red; 
 }
 
-#itemList > dt {
-	margin: 0pt 1em;
+#activityList dt {
+	background-color: lightCyan;
+	margin-left: 2px;
+	border: 1px solid lightGrey;
+}
+
+#activityList dd {
+	background-color: lightYellow;
+	cursor: help;
+	margin-left: 0;
+	border: 1px; 
+	padding-left: 14px;
+}
+
+/* slidebox */
+#slidebox {
+	background-color:gray;
+	display: none;
+	width: 800px;
+	height: 200px;
+	margin-left: -150px;
+	border: 1px solid lightGrey;
+	position: relative;
+}
+#slidebox > span.close {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+	display: block;
+	font-family: Comic Sans MS;
+	padding: 2px 4px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#slidebox img {
+	border: 0 none;
+	display: block;
+	margin: auto;
+}
+#slidebox img.fixedH {
+	height: 100% !important;
+	width: auto !important;
+}
+#slidebox img.fixedW {
+	height: auto !important;
+	width: 100% !important;
+}
+#slidebox .feature {
+	border: 3px solid white;
+	cursor: pointer;
+	left: -1000px;
+	position: absolute;
+	top: -1000px;
+}
+#slidebox .feature > div {
+	background-color: black;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+#slidebox .feature > div p {
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px;
 }
