@@ -51,14 +51,22 @@ google.setOnLoadCallback(function() {
 		 *  找出 activities[][key] === value 者, 代入模版 #tmpSlide 存入 #slidebox
 		 */
 		function showSlidebox(key, value) {
-			var i, a,
-				n = activities.length,
+			var i, a, n,
 				aData = [];
-			for (i = 0; i < n; i++) {
-				a = activities[i];
-				if (a[key] === value) {
-					if (!a.synopsis) a.synopsis = a.datetime + ' - ' + a.group;
-					aData.push(a);
+			if (key) {
+				n = activities.length;
+				for (i = 0; i < n; i++) {
+					a = activities[i];
+					if (key === true) {
+						a.note = a.datetime + ' • ' + a.venue + ' • ' + a.group +
+								(a.synopsis ? ' • ' + a.synopsis : '');
+						aData.push(a);
+					} else {
+						if (a[key] === value) {
+							a.note =  a.synopsis || (a.datetime + ' • ' + a.group);
+							aData.push(a);
+						}
+					}
 				}
 			}
 			if (aData.length) {
@@ -100,6 +108,7 @@ google.setOnLoadCallback(function() {
 					 ' - ' + a.group + '</dd>';
 			}
 			$('#activityList').html(s);
+			showSlidebox(true);
 		}
 
 		/**

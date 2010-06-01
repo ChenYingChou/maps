@@ -146,7 +146,7 @@ $twA[] = array(
 //			'緣起於創團團長蔡子雍高中時期首次接觸阿卡貝拉, 驚豔於阿卡貝拉音樂散發的魅力...'
 	);
 $twA[] = array(
-		'datetime'	=> '2010/06/19  20:00',			// 時間
+		'datetime'	=> '2010/06/19 20:00',			// 時間
 		'venue'		=> 'AHouse',					// 場所
 		'group'		=> '神秘失控',					// 表演團體
 		'image'		=> 'http://lh5.ggpht.com/_Uhh0svybYgM/S_pHF-FfbrI/AAAAAAAAAEg/bfAPlL5j4H4/semi.jpg',
