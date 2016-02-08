@@ -109,7 +109,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/01 20:00',			// 時間
 		'venue'		=> 'AHouse',					// 場所
 		'group'		=> 'Stouxingers',				// 表演團體
-		'image'		=> 'http://lh3.ggpht.com/_Uhh0svybYgM/S_ZoNw2RnAI/AAAAAAAAADs/s9_jP4GYaH4/tbn_stoux.jpg',
+		'image'		=> '//lh3.ggpht.com/_Uhh0svybYgM/S_ZoNw2RnAI/AAAAAAAAADs/s9_jP4GYaH4/tbn_stoux.jpg',
 		'url'		=> 								// 連結網址
 			'http://ahouse.vocalasia.com/index.php/2010/05/21/stouxingers/',
 //		'synopsis'	=>								// 簡介
@@ -119,7 +119,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/03 20:00',			// 時間
 		'venue'		=> 'AHouse',					// 場所
 		'group'		=> 'Blis-sing',					// 表演團體
-		'image'		=> 'http://lh5.ggpht.com/_Uhh0svybYgM/S_ugnFB5yLI/AAAAAAAAAE4/R5953U9umyA/blissing.jpg',
+		'image'		=> '//lh5.ggpht.com/_Uhh0svybYgM/S_ugnFB5yLI/AAAAAAAAAE4/R5953U9umyA/blissing.jpg',
 		'url'		=> 								// 連結網址
 			'http://ahouse.vocalasia.com/index.php/2010/05/25/blissing/',
 //		'synopsis'	=>								// 簡介
@@ -129,7 +129,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/04 20:00',			// 時間
 		'venue'		=> 'AHouse',					// 場所
 		'group'		=> 'Oops',						// 表演團體
-		'image'		=> 'http://lh6.ggpht.com/_Uhh0svybYgM/S_unZa6lKBI/AAAAAAAAAFE/VlAqENAwX6w/oops.jpg',
+		'image'		=> '//lh6.ggpht.com/_Uhh0svybYgM/S_unZa6lKBI/AAAAAAAAAFE/VlAqENAwX6w/oops.jpg',
 		'url'		=> 								// 連結網址
 			'http://ahouse.vocalasia.com/index.php/2010/05/25/oops/',
 //		'synopsis'	=>								// 簡介
@@ -139,7 +139,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/05 20:00',			// 時間
 		'venue'		=> 'AHouse',					// 場所
 		'group'		=> '公共澡堂',					// 表演團體
-		'image'		=> 'http://lh5.ggpht.com/_Uhh0svybYgM/S_og2PEutKI/AAAAAAAAAEQ/FmsaCK4pdwE/%E5%85%AC%E5%85%B1%E6%BE%A1%E5%A0%82.jpg',
+		'image'		=> '//lh5.ggpht.com/_Uhh0svybYgM/S_og2PEutKI/AAAAAAAAAEQ/FmsaCK4pdwE/%E5%85%AC%E5%85%B1%E6%BE%A1%E5%A0%82.jpg',
 		'url'		=> 								// 連結網址
 			'http://ahouse.vocalasia.com/index.php/2010/05/24/thepublicbathhouse/',
 //		'synopsis'	=>								// 簡介
@@ -149,7 +149,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/19 20:00',			// 時間
 		'venue'		=> 'AHouse',					// 場所
 		'group'		=> '神秘失控',					// 表演團體
-		'image'		=> 'http://lh5.ggpht.com/_Uhh0svybYgM/S_pHF-FfbrI/AAAAAAAAAEg/bfAPlL5j4H4/semi.jpg',
+		'image'		=> '//lh5.ggpht.com/_Uhh0svybYgM/S_pHF-FfbrI/AAAAAAAAAEg/bfAPlL5j4H4/semi.jpg',
 		'url'		=> 								// 連結網址
 			'http://ahouse.vocalasia.com/index.php/2010/05/24/semiscon/',
 //		'synopsis'	=>								// 簡介
@@ -159,7 +159,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/26 20:00',			// 時間
 		'venue'		=> 'AHouse',					// 場所
 		'group'		=> '雙下巴',						// 表演團體
-		'image'		=> 'http://lh3.ggpht.com/_Uhh0svybYgM/S_uTDTBaTNI/AAAAAAAAAEw/eLOVowbAd28/%E6%9C%AA%E5%91%BD%E5%90%8D%20-1.jpg',
+		'image'		=> '//lh3.ggpht.com/_Uhh0svybYgM/S_uTDTBaTNI/AAAAAAAAAEw/eLOVowbAd28/%E6%9C%AA%E5%91%BD%E5%90%8D%20-1.jpg',
 		'url'		=> 								// 連結網址
 			'http://ahouse.vocalasia.com/index.php/2010/05/25/doublechinsingers/',
 //		'synopsis'	=>								// 簡介
@@ -169,7 +169,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/07 20:00',			// 時間
 		'venue'		=> 'AHouse',					// 場所
 		'group'		=> '七巧板',						// 表演團體
-		'image'		=> 'http://avatars.plurk.com/6285182-medium6.gif',
+		'image'		=> '//avatars.plurk.com/6285182-medium6.gif',
 		'url'		=> 								// 連結網址
 			'http://ahouse.vocalasia.com/',
 //		'synopsis'	=>								// 簡介
@@ -179,7 +179,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/27 20:00',			// 時間
 		'venue'		=> 'AHouse',					// 場所
 		'group'		=> '海鷗K',						// 表演團體
-		'image'		=> 'http://avatars.plurk.com/6285182-medium6.gif',
+		'image'		=> '//avatars.plurk.com/6285182-medium6.gif',
 		'url'		=> 								// 連結網址
 			'http://ahouse.vocalasia.com/',
 //		'synopsis'	=>								// 簡介
@@ -189,7 +189,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/05 19:00',			// 時間
 		'venue'		=> '台北市中山堂',				// 場所
 		'group'		=> '有趣的照片',					// 表演團體
-		'image'		=> 'http://lh3.ggpht.com/_BgB_Kqy9z9M/S_BF-IzSeEI/AAAAAAAAE1w/-jcUu03fYco/s288/4b9db3b4354ae.jpg',
+		'image'		=> '//lh3.ggpht.com/_BgB_Kqy9z9M/S_BF-IzSeEI/AAAAAAAAE1w/-jcUu03fYco/s288/4b9db3b4354ae.jpg',
 		'url'		=> 								// 連結網址
 			'http://picasaweb.google.com/Chen.YingChou/GvnWUH',
 		'synopsis'	=>								// 簡介
@@ -199,7 +199,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/12 19:00',			// 時間
 		'venue'		=> '台北市中山堂',				// 場所
 		'group'		=> '有趣的照片',					// 表演團體
-		'image'		=> 'http://lh5.ggpht.com/_BgB_Kqy9z9M/S_BF-DzUxyI/AAAAAAAAE1w/W980MEjtuNY/s288/4b9db29ab5fc3.jpg',
+		'image'		=> '//lh5.ggpht.com/_BgB_Kqy9z9M/S_BF-DzUxyI/AAAAAAAAE1w/W980MEjtuNY/s288/4b9db29ab5fc3.jpg',
 		'url'		=> 								// 連結網址
 			'http://picasaweb.google.com/Chen.YingChou/GvnWUH',
 		'synopsis'	=>								// 簡介
@@ -209,7 +209,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/19 19:00',			// 時間
 		'venue'		=> '台北市中山堂',				// 場所
 		'group'		=> '有趣的照片',					// 表演團體
-		'image'		=> 'http://lh4.ggpht.com/_BgB_Kqy9z9M/S_BF-GJP5OI/AAAAAAAAE1w/pMT2pLMeUh8/s288/4bd197a360d38.jpg',
+		'image'		=> '//lh4.ggpht.com/_BgB_Kqy9z9M/S_BF-GJP5OI/AAAAAAAAE1w/pMT2pLMeUh8/s288/4bd197a360d38.jpg',
 		'url'		=> 								// 連結網址
 			'http://picasaweb.google.com/Chen.YingChou/GvnWUH',
 		'synopsis'	=>								// 簡介
@@ -219,7 +219,7 @@ $twA[] = array(
 		'datetime'	=> '2010/06/26 19:00',			// 時間
 		'venue'		=> '台北市中山堂',				// 場所
 		'group'		=> '有趣的照片',					// 表演團體
-		'image'		=> 'http://lh3.ggpht.com/_BgB_Kqy9z9M/S_BF-PjilZI/AAAAAAAAE1w/61KQjZSRuBA/s288/4b98452ad0dd2.jpg',
+		'image'		=> '//lh3.ggpht.com/_BgB_Kqy9z9M/S_BF-PjilZI/AAAAAAAAE1w/61KQjZSRuBA/s288/4b98452ad0dd2.jpg',
 		'url'		=> 								// 連結網址
 			'http://picasaweb.google.com/Chen.YingChou/GvnWUH',
 		'synopsis'	=>								// 簡介
