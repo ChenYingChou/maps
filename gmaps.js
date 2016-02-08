@@ -133,7 +133,7 @@ function initialize(GM, $, opts) {	// GM=google.maps, $=jQuery
 
 	$(window).bind('unload',function() {
 		// 清除物件...
-		$itemList.die();				// remove all live events for $itemList
+		$itemList.off();				// remove all live events for $itemList
 		gMap.clearOverlays();
 		$itemList = $view = gMap = geocoder = markers = $markers = null;
 		delete $.templates[tmplList];
